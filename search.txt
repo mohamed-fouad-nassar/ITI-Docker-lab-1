@@ -1,0 +1,30 @@
+1- CMD & ENTRYPOINT
+
+-- CMD:
+	-- provide a default command that can be overridden
+	-- SYNTAX ==> CMD ["node", "server.js"]
+	-- by default when run the container it will run "node server.js" by default
+	-- but we can override it by this ==> docker run myapp node app.js and this will replace the default CMD with ["node", "app.js"]
+	
+-- ENTRYPOINT:
+	-- define the main executable of the container, and can't be overridden
+	-- SYNTAX ==> ENTRYPOINT ["node"]
+	-- we can run the container like this: docker run myapp server.js, it takes server.js as argument of node command [node server.js]
+
+--- we can use them both like this:
+	ENTRYPOINT ["node"]
+	CMD ["server.js"]
+	- so we can run container by docker run myapp ==> will run node server.js
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+2- COPY & ADD
+
+-- COPY:
+	-- copy files from local machine into the image files
+	-- SYNTAX ==> COPY files destination
+
+-- ADD:
+	-- do the same of COPY but with extra features:
+		1) Extracts archives
+		2) download from urls
