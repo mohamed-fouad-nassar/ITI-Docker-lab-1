@@ -52,7 +52,7 @@ Deploy a MySQL database called app-database Using the mysql latest image in back
 3. build the image and test it
    ![image-5-3-1](./images/5-3-1.png)
    ![image-5-3-2](./images/5-3-2.png)
-4. exit and stop container
+4. push the image into docker repo
    ![image-5-4-1](./images/5-4-1.png)
    ![image-5-4-2](./images/5-4-2.png)
    ![image-5-4-3](./images/5-4-3.png)
